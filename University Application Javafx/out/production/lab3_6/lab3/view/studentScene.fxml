@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lab3.controller.StudentSceneController">
+   <HBox prefHeight="400.0" prefWidth="600.0">
+      <ListView fx:id="studentListView" prefHeight="400.0" prefWidth="432.0"/>
+      <AnchorPane prefHeight="400.0" prefWidth="187.0">
+         <TextField fx:id="firstNameTextField" layoutX="13.0" layoutY="14.0" promptText="First name"/>
+         <TextField fx:id="lastNameTextField" layoutX="13.0" layoutY="48.0" promptText="Last name"/>
+         <Button fx:id="registerStudentButton" layoutX="59.0" layoutY="82.0" mnemonicParsing="false"
+                 onMouseClicked="#registerStudentButtonOnMouseClick" text="Register"/>
+         <Button fx:id="courseRegisterButton" layoutX="23.0" layoutY="238.0" mnemonicParsing="false"
+                 onMouseClicked="#courseRegisterButtonOnMouseClick" text="Register to Course(s)"/>
+         <TextField fx:id="courseRegisterTextField" layoutX="13.0" layoutY="200.0" prefHeight="26.0"
+                    prefWidth="150.0" promptText="Course IDs to register to"/>
+         <Button fx:id="creditNumberButton" layoutX="30.0" layoutY="360.0" mnemonicParsing="false"
+                 onMouseClicked="#creditNumberButtonOnMouseClick" text="See credit number"/>
+         <TextArea layoutX="14.0" layoutY="121.0" prefHeight="70.0" prefWidth="150.0"
+                   text="Select student from the left, enter course id below and click button to register student.&#10;"
+                   wrapText="true"/>
+         <TextArea layoutX="14.0" layoutY="278.0" prefHeight="70.0" prefWidth="150.0"
+                   text="Select student from the left and press below button to see number of credits for that student"
+                   wrapText="true"/>
+      </AnchorPane>
+   </HBox>
+   <TextArea fx:id="notificationTextArea" layoutY="400.0" prefHeight="106.0" prefWidth="600.0"
+             promptText="Notification area"/>
+</AnchorPane>

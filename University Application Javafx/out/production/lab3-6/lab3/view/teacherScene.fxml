@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab3.controller.TeacherSceneController">
+   <HBox prefHeight="400.0" prefWidth="600.0">
+      <ListView fx:id="teacherListView" prefHeight="400.0" prefWidth="421.0" />
+      <AnchorPane prefHeight="400.0" prefWidth="187.0">
+         <TextField fx:id="firstNameTextField" layoutX="13.0" layoutY="14.0" promptText="First name" />
+         <TextField fx:id="lastNameTextField" layoutX="13.0" layoutY="48.0" promptText="Last name" />
+         <Button fx:id="registerTeacherButton" layoutX="59.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#registerTeacherButtonOnMouseClick" text="Register" />
+         <TextArea fx:id="seeCoursesTextArea" layoutX="19.0" layoutY="129.0" prefHeight="70.0" prefWidth="150.0" text="Select teacher from the left,  and click button below to see the students he/she teaches.&#10;" wrapText="true" />
+         <Button fx:id="seeTeachersButton" layoutX="45.0" layoutY="210.0" mnemonicParsing="false" onMouseClicked="#seeCoursesButtonOnMouseClick" text="See teachers" />
+         <TextArea layoutX="12.0" layoutY="252.0" prefHeight="70.0" prefWidth="150.0" text="Note: to see real-time &#10;processing of the data, &#10;you could try and register &#10;a student in the student &#10;window, then come back &#10;here, click the &quot;see &#10;students&quot; for that specific &#10;course and note the&#10;difference." />
+      </AnchorPane>
+   </HBox>
+   <TextArea fx:id="notificationTextArea" layoutY="400.0" prefHeight="106.0" prefWidth="600.0" promptText="Notification area" />
+</AnchorPane>
